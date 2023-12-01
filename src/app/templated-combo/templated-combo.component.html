@@ -1,0 +1,14 @@
+<div class="column-layout group">
+  <h5 class="h5">
+    Templated Combo Example
+  </h5>
+  <p class="text">
+    This sample demonstrates binding the dashboard name to a combo and using the Reveal Thumbnail Component to show a preview of the dashboard in the dropdown selector, then loading the selected dashboard into a RevealView. 
+  </p>
+  <igx-simple-combo type="border" [data]="revealDomDashboardsFileData" [ngModel]="dashboardName!" valueKey="name" displayKey="name" (selectionChanging)="singleSelectComboSelectionChanging($event)" class="single-select-combo">
+    <label igxLabel>Dashboard Name</label>
+  </igx-simple-combo>
+  <p class="text_1">
+    dashboard here
+  </p>
+</div>
