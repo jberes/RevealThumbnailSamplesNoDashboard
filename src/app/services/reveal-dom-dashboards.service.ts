@@ -3,7 +3,11 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FileData } from '../models/reveal-dom-dashboards/file-data';
 
-const API_ENDPOINT = 'https://revealdom.azurewebsites.net';
+//const API_ENDPOINT = 'https://revealdom.azurewebsites.net';
+
+const API_ENDPOINT = 'https://reveal-api.azurewebsites.net';
+
+
 
 @Injectable({
   providedIn: 'root'

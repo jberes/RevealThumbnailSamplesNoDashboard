@@ -13,6 +13,7 @@ import { BasicGridComponent } from './basic-grid/basic-grid.component';
 import { CardViewComponent } from './card-view/card-view.component';
 import { DashboardViewerComponent } from './dashboard-viewer/dashboard-viewer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardThumbnailComponent } from './dashboard-thumbnail/dashboard-thumbnail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     ImageListComponent,
     BasicGridComponent,
     CardViewComponent,
-    DashboardViewerComponent
+    DashboardViewerComponent,
+    DashboardThumbnailComponent
   ],
   imports: [
     BrowserModule,
