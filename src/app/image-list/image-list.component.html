@@ -11,7 +11,11 @@
     <igx-list (click)="listClick()" class="list">
       <igx-list-item [isHeader]="false" *ngFor="let item of revealDomDashboardsFileData" (click)="listItemClick(item)">
         <span igxListThumbnail>
-          <igx-avatar [src]="item.fakeDashboardImageUrl" shape="rounded"></igx-avatar>
+        <igx-card>
+          <igx-card-media height="75px" width="100px">
+            <app-dashboard-thumbnail [dashboardId]="item.name" />
+          </igx-card-media>
+        </igx-card>
         </span>
         <span igxListLineTitle>{{ item.name }}</span>
         <span igxListLineSubTitle>{{ item.dateCreated }}</span>

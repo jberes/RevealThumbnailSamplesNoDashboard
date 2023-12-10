@@ -9,7 +9,8 @@
 <div class="row-layout group_1">
   <div class="column-layout group_2">
     <igx-list class="list">
-      <igx-list-item [isHeader]="false" *ngFor="let item of revealDomDashboardsFileData" (click)="listItemClick(item)">
+      <igx-list-item [isHeader]="false" *ngFor="let item of revealDomDashboardsFileData" 
+        (click)="listItemClick(item)">
         <span igxListLineTitle>{{ item.name }}</span>
       </igx-list-item>
     </igx-list>

@@ -8,60 +8,18 @@
 </div>
 <div class="column-layout group_1">
   <igx-grid [data]="revealDomDashboardsFileData" primaryKey="name" displayDensity="cosy" rowSelection="single" [hideRowSelectors]="true" [allowFiltering]="true" filterMode="excelStyleFilter" (rowSelectionChanging)="gridRowSelectionChanging($event)" class="grid">
-    
-
-    
-    <igx-column field="fakeDashboardImageUrl" dataType="image" header="fakeDashboardImageUrl" width="441px" [sortable]="true" [resizable]="true" [selectable]="false">
+    <igx-column field="" dataType="string" header="" width="125px" [pinned]="true" [sortable]="false" [resizable]="false" [filterable]="false" [selectable]="false">
       <ng-template igxCell let-cell="cell">
         <div class="column-layout group_2">
-          <div class="row-layout group_3">
-            
-<igx-avatar size="large">
-  <app-dashboard-thumbnail [dashboardId]="cell.row.data.name"></app-dashboard-thumbnail>
-
-</igx-avatar>
-
-            <!-- <igx-avatar [src]="cell.value" size="large" routerLink="/dashboard-viewer" class="avatar"></igx-avatar>
-            <p class="text_1">
-              {{ cell.row.data.name }} 
-            </p>-->
-          </div>
+            <igx-card>
+              <igx-card-media height="75px" width="100px">
+                <app-dashboard-thumbnail [dashboardId]="cell.row.data.name" />
+              </igx-card-media>
+            </igx-card>
         </div>
       </ng-template>
     </igx-column>
-
-
-    <!-- <igx-card-media height="400px">
-      <app-dashboard-thumbnail [dashboardId]="item.name" />
-       <img [src]="item.fakeDashboardImageUrl" class="image" /> 
-    </igx-card-media> -->
-
-
-
-    <!-- <igx-column field="fakeDashboardImageUrl" dataType="image" header="fakeDashboardImageUrl" width="441px" [sortable]="true" [resizable]="true" [selectable]="false">
-      <ng-template igxCell let-cell="cell">
-        <div class="column-layout group_2">
-          
-          
-          <div class="row-layout group_3">
-            <app-dashboard-thumbnail [dashboardId]="cell.row.data.name" />
-            
-            <igx-avatar [src]="cell.value" size="large" routerLink="/dashboard-viewer" class="avatar"></igx-avatar>
-            
-            <p class="text_1">
-              {{ cell.row.data.name }}
-            </p> 
-          </div>
-
-
-
-        </div>
-      </ng-template>
-    </igx-column> -->
-
-
-
-    <igx-column field="name" dataType="string" header="Dashboard" [hidden]="true" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
+    <igx-column field="name" dataType="string" width="200px" header="Dashboard" [hidden]="false" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
     <igx-column field="fakeOwnerImageUrl" dataType="image" header="Added By" width="372px" [sortable]="true" [resizable]="true" [selectable]="false">
       <ng-template igxCell let-cell="cell">
         <div class="row-layout group_4">

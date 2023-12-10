@@ -32,5 +32,6 @@ export class SimpleComboComponent implements OnInit, OnDestroy {
 
   public singleSelectComboSelectionChanging(event: ISimpleComboSelectionChangingEventArgs) {
     this.dashboardName = event.newSelection as string;
+    console.log(this.dashboardName);
   }
 }
