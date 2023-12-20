@@ -8,7 +8,7 @@
 </div>
 <div class="row-layout group_1">
   <div class="row-layout group_2">
-    <igx-card type="outlined" *ngFor="let item of revealDomDashboardsFileData" class="card">
+    <igx-card width="125px" type="outlined" *ngFor="let item of revealDomDashboardsFileData" class="card">
       <igx-card-header>
         <div igxCardThumbnail>
           <igx-avatar [src]="item.fakeOwnerImageUrl" size="medium" shape="circle"></igx-avatar>
@@ -22,7 +22,7 @@
       </igx-card-header>
       
       
-      <igx-card-media height="400px">
+      <igx-card-media height="125px" >
         <app-dashboard-thumbnail [dashboardId]="item.name" />
         <!-- <img [src]="item.fakeDashboardImageUrl" class="image" /> -->
       </igx-card-media>
@@ -34,20 +34,15 @@
 
 
       <igx-card-actions class="actions-content">
-        <ng-container igxStart>
+        <!-- <ng-container igxStart>
           <button igxButton="flat" igxRipple routerLink="/dashboard-viewer" class="button">
             Open
           </button>
-        </ng-container>
+        </ng-container> -->
         <ng-container igxEnd>
           <button igxButton="icon" igxRipple>
             <igx-icon>
               favorite
-            </igx-icon>
-          </button>
-          <button igxButton="icon" igxRipple>
-            <igx-icon>
-              bookmark
             </igx-icon>
           </button>
           <button igxButton="icon" igxRipple>
